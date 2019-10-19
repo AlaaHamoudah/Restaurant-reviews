@@ -6,6 +6,8 @@
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <!-- Main CSS file -->
   <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="stylesheet" href="css/tablet.css" media='(max-width: 1024px) and (min-width: 700px)' >
+  <link rel="stylesheet" href="css/mobile.css" media='(max-width: 700px)' >
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
   <title>Restaurant Info</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,15 +32,17 @@
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning map -->
-    <section id="map-container">
-      <div id="map"></div>
-    </section>
+    
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
       <h1 id="restaurant-name"></h1>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
+      <section id="map-container">
+        <div id="map"></div>
+      </section>
+     
       <p id="restaurant-address"></p>
       <table id="restaurant-hours"></table>
     </section>

@@ -1,3 +1,29 @@
 #restaurants-container div {
     width:94%;
 }
+
+.inside #map-container {
+    
+    display: block !important;
+    position: static;
+    height: 200px;
+
+    width: 91%;
+
+}
+
+#breadcrumb, #restaurant-container{
+    width: 100%;
+    padding: 10px;
+}
+
+
+#reviews-container{
+    width: 99%;
+    padding: 2%;
+}
+
+.inside #footer {
+ 
+    width: 100%;
+}
