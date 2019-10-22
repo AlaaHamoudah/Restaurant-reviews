@@ -1,4 +1,4 @@
- 
+
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
       navigator.serviceWorker.register('/sw-registeration.js').then(function() {
@@ -14,6 +14,8 @@
   var CACHE_NAME = 'restaurant-cache-v1';
   var urlsToCache = [
     '/',
+    '/index.html',
+    '/restaurant.html',
     '/css/mobile.css',
     '/css/tablet.css',
     '/css/styles.css',
@@ -39,7 +41,9 @@ self.addEventListener('fetch', function(event) {
   console.log('Service Worker fetching from cache.');
   event.respondWith(
     fetch(event.request).catch(function() {
-      return caches.match(event.request);
+      return caches.match(event.request, {'ignoreSearch':true}).then(function(response) {
+        return response || fetch(event.request);
+      })
     })
   );
 });

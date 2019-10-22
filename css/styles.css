@@ -49,23 +49,23 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-transform: uppercase;
 }
 /* ====================== Navigation ====================== */
-nav {
+h1.title {
   width: 100%;
   height: 80px;
   background-color: #252831;
   text-align:center;
 }
-nav h1 {
+h1.title {
   margin: auto;
 }
-nav h1 a {
+h1.title {
   color: #fff;
   font-size: 14pt;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
-#breadcrumb {
+#breadcrumb ul{
     padding: 10px 40px 16px;
     list-style: none;
     background-color: #eee;
@@ -75,25 +75,25 @@ nav h1 a {
 }
 
 /* Display list items side by side */
-#breadcrumb li {
-    display: inline;
+#breadcrumb ul li {
+    display: inline !important;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
-#breadcrumb li+li:before {
+#breadcrumb ul li+li:before {
     padding: 8px;
     color: black;
     content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
-#breadcrumb li a {
+#breadcrumb ul li a {
     color: #0275d8;
     text-decoration: none;
 }
 
 /* Add a color on mouse-over */
-#breadcrumb li a:hover {
+#breadcrumb ul li a:hover {
     color: #01447e;
     text-decoration: underline;
 }
@@ -206,7 +206,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -273,4 +273,7 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+.title{
+  text-align: center;
 }

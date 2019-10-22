@@ -77,8 +77,8 @@ initMap = () => {
         zoom: 12,
         scrollWheelZoom: false
       });
-  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token=key-goes-here', {
-    mapboxToken: 'key-goes-here',
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token=sk.eyJ1IjoiYWxhYWtoYWxpbCIsImEiOiJjazF4Y3ZqY2EwNWZ6M3B1Z3M3cHhjYXN0In0.GVDUUkvFdS7d-lqEWpxfTA', {
+    mapboxToken: 'sk.eyJ1IjoiYWxhYWtoYWxpbCIsImEiOiJjazF4Y3ZqY2EwNWZ6M3B1Z3M3cHhjYXN0In0.GVDUUkvFdS7d-lqEWpxfTA',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -163,7 +163,7 @@ createRestaurantHTML = (restaurant) => {
   image.alt = restaurant.name;
   div.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   name.setAttribute('tabIndex', 0);
   div.append(name);

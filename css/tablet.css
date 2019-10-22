@@ -1,3 +1,8 @@
 #restaurants-container div {
     width:42%;
 }
+
+
+#reviews-list li {
+    width: 72%;
+}
